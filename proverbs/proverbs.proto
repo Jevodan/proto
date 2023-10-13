@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/Jevodan/proto/proverbs";
+
+package proverbs;
+
+service Proverbs {
+    rpc GetProverb(Timing) returns (Proverb){}
+}
+
+message Timing {
+    int32 timeing = 1;
+}
+
+message Proverb {
+    string verb = 1;
+}

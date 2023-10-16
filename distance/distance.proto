@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package ="github.com/Jevodan/proto/distance";
+
+package distance;
+
+service Distance {
+    rpc GetDistance(Points) returns (Dist){}
+}
+
+message Point {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message Points {
+    Point a = 1;
+    Point b = 2;
+}
+
+message Dist {
+    float result = 1;
+}

@@ -19,5 +19,5 @@ message Points {
 }
 
 message Dist {
-    float result = 1;
+    double result = 1;
 }
